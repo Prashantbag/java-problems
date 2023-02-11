@@ -40,13 +40,9 @@ public class FruitsListService {
 			for(int j=0;j<strSplit.length;j++) {
 				if(strSplit[j]==fruit.charAt(j)){
 					if(Character.isLowerCase(strSplit[j]) && Character.isLowerCase(fruit.charAt(j))) {
-						System.out.println(theStr.charAt(j));
-						System.out.println("true");
 						match=true;
 					}else if(Character.isUpperCase(strSplit[j]) && Character.isUpperCase(fruit.charAt(j))){
-						System.out.println(theStr.charAt(j));
 						match=true;
-						System.out.println("true");
 					
 					}
 					
@@ -86,9 +82,9 @@ public class FruitsListService {
 		FruitsListService obj= new FruitsListService();
 	
 		String str="aPple,mango,Appale";
-		List fruitsList =new ArrayList(Arrays.asList("apple","orange","guava"));
+		List fruitsList =new ArrayList(Arrays.asList("apple","orange","gUava"));
 		//System.out.println(obj.addFruitsToList(str));
-		//System.out.println(obj.searchFruitInList(fruitsList, "gUaVa"));
-		System.out.println(obj.searchFruitInListIgnoreCase(fruitsList, "gUava"));
+		System.out.println(obj.searchFruitInList(fruitsList, "gUaVa"));
+		//System.out.println(obj.searchFruitInListIgnoreCase(fruitsList, "gUava"));
 	}
 }
