@@ -68,16 +68,17 @@ public class FruitsListService {
 	}
 	
 	public static int searchFruitInListIgnoreCase(List fruitsList, String fruit) {
+		int index=0;
 		for(int i =0;i<fruitsList.size();i++) {
 			String str=(String) fruitsList.get(i);
 				if(str.toLowerCase().equals(fruit.toLowerCase())) {
-					return fruitsList.indexOf(fruitsList.get(i));
+					index=i;
 				}else {
 					
-					return -1;
+					index=-1;
 				}
 		}
-		return -1;
+		return index;
 	}
 	
 	
@@ -85,9 +86,9 @@ public class FruitsListService {
 		FruitsListService obj= new FruitsListService();
 	
 		String str="aPple,mango,Appale";
-		List fruitsList =new ArrayList(Arrays.asList("apple","orange","gUava"));
+		List fruitsList =new ArrayList(Arrays.asList("apple","orange","guava"));
 		//System.out.println(obj.addFruitsToList(str));
 		//System.out.println(obj.searchFruitInList(fruitsList, "gUaVa"));
-		System.out.println(obj.searchFruitInListIgnoreCase(fruitsList, "gUaVa"));
+		System.out.println(obj.searchFruitInListIgnoreCase(fruitsList, "gUava"));
 	}
 }
